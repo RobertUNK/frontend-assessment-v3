@@ -1,6 +1,25 @@
-import "@/styles/globals.css";
-import type { AppProps } from "next/app";
+import type { AppProps } from 'next/app';
+import { ThemeProvider, createTheme } from '@mui/material/styles';
+import CssBaseline from '@mui/material/CssBaseline';
+import '../styles/global.css';
+import Layout from '../components/Layout';
+import { FavoritesProvider } from '../context/FavoritesContext';
 
-export default function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />;
+const theme = createTheme({
+  palette: { primary: { main: '#1976d2' } },
+});
+
+function MyApp({ Component, pageProps }: AppProps) {
+  return (
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+      <FavoritesProvider>
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      </FavoritesProvider>
+    </ThemeProvider>
+  );
 }
+
+export default MyApp;
