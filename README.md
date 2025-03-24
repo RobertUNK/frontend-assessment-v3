@@ -29,13 +29,6 @@ A Next.js + React application with a mock Express API for managing projects and 
 - Node.js v18+  
 - npm v9+  
 
-### Installation
-
-```bash
-git clone <repo-url>
-cd frontend-assessment-v3
-npm install
-
 ## API Reference
 
 | Method | Endpoint              | Description                     |
@@ -56,3 +49,10 @@ npm install
 | `npm run mock-api` | Run Express mock API (port 3001)    |
 | `npm run build`    | Build for production               |
 | `npm start`        | Start production server            |
+
+### Installation
+
+```bash
+git clone <repo-url>
+cd frontend-assessment-v3
+npm install
